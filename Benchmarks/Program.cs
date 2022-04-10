@@ -3,6 +3,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using AutoBogus;
 using BenchmarkDotNet.Attributes;
@@ -25,6 +26,7 @@ public class EnumerableBenchmarks
     public EnumerableBenchmarks()
     {
         var data = new AutoFaker<string>().Generate(1000);
+        data[50] = "foo";
         _vanillaEnumerable = data.AsEnumerable();
         _asyncEnumerable = AsAsyncEnumerable(data);
     }
