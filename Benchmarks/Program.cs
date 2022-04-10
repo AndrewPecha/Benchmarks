@@ -1,11 +1,21 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using AutoBogus;
 using BenchmarkDotNet.Attributes;
 using BenchmarkDotNet.Running;
 
-Console.WriteLine("Hello, World!");
-var summary = BenchmarkRunner.Run(typeof(Program).Assembly);
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("Hello, World!");
+        var summary = BenchmarkRunner.Run(typeof(Program).Assembly);
+    }
+}
 
 public class EnumerableBenchmarks
 {
@@ -43,5 +53,17 @@ public class EnumerableBenchmarks
         {
             //do nothing, just iterating
         }
+    }
+
+    [Benchmark]
+    public void AnyVanilla()
+    {
+        var foo = _vanillaEnumerable.Any(x => x == "foo");
+    }
+    
+    [Benchmark]
+    public async Task AnyAsync()
+    {
+        var foo = await _asyncEnumerable.AnyAsync(x => x == "foo");
     }
 }

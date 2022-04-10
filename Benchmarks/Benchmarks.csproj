@@ -3,120 +3,12 @@
     <PropertyGroup>
         <OutputType>Exe</OutputType>
         <TargetFramework>net6.0</TargetFramework>
-        <ImplicitUsings>enable</ImplicitUsings>
-        <Nullable>enable</Nullable>
+        <ImplicitUsings>disable</ImplicitUsings>
     </PropertyGroup>
 
     <ItemGroup>
       <PackageReference Include="AutoBogus" Version="2.13.1" />
       <PackageReference Include="BenchmarkDotNet" Version="0.13.1" />
+      <PackageReference Include="System.Linq.Async" Version="6.0.1" />
     </ItemGroup>
-
-    <ItemGroup>
-      <Content Include="bin\Release\net6.0\amd64\KernelTraceControl.dll" />
-      <Content Include="bin\Release\net6.0\amd64\msdia140.dll" />
-      <Content Include="bin\Release\net6.0\amd64\msvcp140.dll" />
-      <Content Include="bin\Release\net6.0\amd64\vcruntime140.dll" />
-      <Content Include="bin\Release\net6.0\amd64\vcruntime140_1.dll" />
-      <Content Include="bin\Release\net6.0\AutoBogus.dll" />
-      <Content Include="bin\Release\net6.0\BenchmarkDotNet.Annotations.dll" />
-      <Content Include="bin\Release\net6.0\BenchmarkDotNet.Artifacts\EnumerableBenchmarks-20220410-120525.log" />
-      <Content Include="bin\Release\net6.0\BenchmarkDotNet.Artifacts\EnumerableBenchmarks-20220410-120656.log" />
-      <Content Include="bin\Release\net6.0\BenchmarkDotNet.Artifacts\results\EnumerableBenchmarks-report-github.md" />
-      <Content Include="bin\Release\net6.0\BenchmarkDotNet.Artifacts\results\EnumerableBenchmarks-report.csv" />
-      <Content Include="bin\Release\net6.0\BenchmarkDotNet.Artifacts\results\EnumerableBenchmarks-report.html" />
-      <Content Include="bin\Release\net6.0\BenchmarkDotNet.dll" />
-      <Content Include="bin\Release\net6.0\Benchmarks.deps.json" />
-      <Content Include="bin\Release\net6.0\Benchmarks.dll" />
-      <Content Include="bin\Release\net6.0\Benchmarks.exe" />
-      <Content Include="bin\Release\net6.0\Benchmarks.pdb" />
-      <Content Include="bin\Release\net6.0\Benchmarks.runtimeconfig.json" />
-      <Content Include="bin\Release\net6.0\Bogus.dll" />
-      <Content Include="bin\Release\net6.0\CommandLine.dll" />
-      <Content Include="bin\Release\net6.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll" />
-      <Content Include="bin\Release\net6.0\cs\Microsoft.CodeAnalysis.resources.dll" />
-      <Content Include="bin\Release\net6.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll" />
-      <Content Include="bin\Release\net6.0\de\Microsoft.CodeAnalysis.resources.dll" />
-      <Content Include="bin\Release\net6.0\Dia2Lib.dll" />
-      <Content Include="bin\Release\net6.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll" />
-      <Content Include="bin\Release\net6.0\es\Microsoft.CodeAnalysis.resources.dll" />
-      <Content Include="bin\Release\net6.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll" />
-      <Content Include="bin\Release\net6.0\fr\Microsoft.CodeAnalysis.resources.dll" />
-      <Content Include="bin\Release\net6.0\Iced.dll" />
-      <Content Include="bin\Release\net6.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll" />
-      <Content Include="bin\Release\net6.0\it\Microsoft.CodeAnalysis.resources.dll" />
-      <Content Include="bin\Release\net6.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll" />
-      <Content Include="bin\Release\net6.0\ja\Microsoft.CodeAnalysis.resources.dll" />
-      <Content Include="bin\Release\net6.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll" />
-      <Content Include="bin\Release\net6.0\ko\Microsoft.CodeAnalysis.resources.dll" />
-      <Content Include="bin\Release\net6.0\Microsoft.CodeAnalysis.CSharp.dll" />
-      <Content Include="bin\Release\net6.0\Microsoft.CodeAnalysis.dll" />
-      <Content Include="bin\Release\net6.0\Microsoft.Diagnostics.FastSerialization.dll" />
-      <Content Include="bin\Release\net6.0\Microsoft.Diagnostics.NETCore.Client.dll" />
-      <Content Include="bin\Release\net6.0\Microsoft.Diagnostics.Runtime.dll" />
-      <Content Include="bin\Release\net6.0\Microsoft.Diagnostics.Tracing.TraceEvent.dll" />
-      <Content Include="bin\Release\net6.0\Microsoft.DotNet.PlatformAbstractions.dll" />
-      <Content Include="bin\Release\net6.0\OSExtensions.dll" />
-      <Content Include="bin\Release\net6.0\Perfolizer.dll" />
-      <Content Include="bin\Release\net6.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll" />
-      <Content Include="bin\Release\net6.0\pl\Microsoft.CodeAnalysis.resources.dll" />
-      <Content Include="bin\Release\net6.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll" />
-      <Content Include="bin\Release\net6.0\pt-BR\Microsoft.CodeAnalysis.resources.dll" />
-      <Content Include="bin\Release\net6.0\ref\Benchmarks.dll" />
-      <Content Include="bin\Release\net6.0\runtimes\win\lib\netcoreapp2.0\System.Management.dll" />
-      <Content Include="bin\Release\net6.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll" />
-      <Content Include="bin\Release\net6.0\ru\Microsoft.CodeAnalysis.resources.dll" />
-      <Content Include="bin\Release\net6.0\System.CodeDom.dll" />
-      <Content Include="bin\Release\net6.0\System.Management.dll" />
-      <Content Include="bin\Release\net6.0\TraceReloggerLib.dll" />
-      <Content Include="bin\Release\net6.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll" />
-      <Content Include="bin\Release\net6.0\tr\Microsoft.CodeAnalysis.resources.dll" />
-      <Content Include="bin\Release\net6.0\x86\KernelTraceControl.dll" />
-      <Content Include="bin\Release\net6.0\x86\KernelTraceControl.Win61.dll" />
-      <Content Include="bin\Release\net6.0\x86\msdia140.dll" />
-      <Content Include="bin\Release\net6.0\x86\msvcp140.dll" />
-      <Content Include="bin\Release\net6.0\x86\vcruntime140.dll" />
-      <Content Include="bin\Release\net6.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll" />
-      <Content Include="bin\Release\net6.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll" />
-      <Content Include="bin\Release\net6.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll" />
-      <Content Include="bin\Release\net6.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll" />
-      <Content Include="obj\Benchmarks.csproj.nuget.dgspec.json" />
-      <Content Include="obj\Benchmarks.csproj.nuget.g.props" />
-      <Content Include="obj\Benchmarks.csproj.nuget.g.targets" />
-      <Content Include="obj\Debug\net6.0\Benchmarks.AssemblyInfoInputs.cache" />
-      <Content Include="obj\Debug\net6.0\Benchmarks.assets.cache" />
-      <Content Include="obj\Debug\net6.0\Benchmarks.csproj.AssemblyReference.cache" />
-      <Content Include="obj\Debug\net6.0\Benchmarks.GeneratedMSBuildEditorConfig.editorconfig" />
-      <Content Include="obj\project.assets.json" />
-      <Content Include="obj\project.nuget.cache" />
-      <Content Include="obj\project.packagespec.json" />
-      <Content Include="obj\Release\net6.0\apphost.exe" />
-      <Content Include="obj\Release\net6.0\Benchmarks.AssemblyInfoInputs.cache" />
-      <Content Include="obj\Release\net6.0\Benchmarks.assets.cache" />
-      <Content Include="obj\Release\net6.0\Benchmarks.csproj.AssemblyReference.cache" />
-      <Content Include="obj\Release\net6.0\Benchmarks.csproj.CopyComplete" />
-      <Content Include="obj\Release\net6.0\Benchmarks.csproj.CoreCompileInputs.cache" />
-      <Content Include="obj\Release\net6.0\Benchmarks.csproj.FileListAbsolute.txt" />
-      <Content Include="obj\Release\net6.0\Benchmarks.dll" />
-      <Content Include="obj\Release\net6.0\Benchmarks.GeneratedMSBuildEditorConfig.editorconfig" />
-      <Content Include="obj\Release\net6.0\Benchmarks.genruntimeconfig.cache" />
-      <Content Include="obj\Release\net6.0\Benchmarks.pdb" />
-      <Content Include="obj\Release\net6.0\ref\Benchmarks.dll" />
-      <Content Include="obj\rider.project.restore.info" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <Compile Include="obj\Debug\net6.0\.NETCoreApp,Version=v6.0.AssemblyAttributes.cs" />
-      <Compile Include="obj\Debug\net6.0\Benchmarks.AssemblyInfo.cs" />
-      <Compile Include="obj\Debug\net6.0\Benchmarks.GlobalUsings.g.cs" />
-      <Compile Include="obj\Release\net6.0\.NETCoreApp,Version=v6.0.AssemblyAttributes.cs" />
-      <Compile Include="obj\Release\net6.0\Benchmarks.AssemblyInfo.cs" />
-      <Compile Include="obj\Release\net6.0\Benchmarks.GlobalUsings.g.cs" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <Folder Include="bin\Debug\net6.0\ref" />
-      <Folder Include="obj\Debug\net6.0\ref" />
-    </ItemGroup>
-
 </Project>
